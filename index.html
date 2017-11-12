@@ -9,15 +9,34 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
+
+<script>
+  function myFunction() {
+      var x = document.getElementById("navbar-small");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>
+
 <body class="w3-light-grey">
 
 <!-- Nav Bar -->
 <div class="w3-top">
 <div class="w3-bar w3-light-grey w3-border">
   <a href="#" class="w3-bar-item w3-button w3-red"><i class="fa fa-home"></i> Accueil</a>
-  <a href="./fichiers/CV.pdf" class="w3-bar-item w3-button"><i class="fa fa-sign-in w3-text-red"></i> Télécharger mon CV</a>
-  <a href="./index-en.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-flag w3-text-red"></i> English version</a>
+  <a href="./fichiers/CV.pdf" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-sign-in w3-text-red"></i> Télécharger mon CV</a>
+  <a href="./index-en.html" class="w3-bar-item w3-button w3-right w3-hide-small"><i class="fa fa-flag w3-text-red"></i> English version</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
 </div>
+
+<div id="navbar-small" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+    <a href="./fichiers/CV.pdf" class="w3-bar-item w3-button"><i class="fa fa-sign-in w3-text-white"></i> Télécharger mon CV</a>
+    <a href="./index-en.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-flag w3-text-white"></i> English version</a>
+</div>
+
 </div>
 <br><br>
 
@@ -110,7 +129,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
 
-      <div class="w3-container w3-card-2 w3-white">
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Etudes et formations</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Polytech Grenoble</b></h5>
@@ -125,7 +144,22 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <br>
         </div>
       </div>
+<!-- NOUVEAU CODE
+      <div  class="w3-container w3-card-2 w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-smile-o fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Centres d'intérêts</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Musique</b></h5>
+          <p>Clarinette et batterie</p>
+          <hr>
 
+          <h5 class="w3-opacity"><b>Voyages</b></h5>
+          <p>Goût pour les voyages à l’étranger, découverte de nouvelles régions (Voyage humanitaire de 3
+            semaines en Thaïlande)</p>
+          <hr>
+
+        </div>
+      </div>
+-->
     <!-- End Right Column -->
     </div>
     
